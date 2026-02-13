@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our World Together ❤️</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Our World Together</h1>
+            <p class="subtitle">For Maria, with all my love ❤️</p>
+        </header>
+
+        <!-- Filter Controls -->
+        <div class="controls">
+            <button class="filter-btn active" data-filter="all">
+                <span class="icon">🌍</span> Show All
+            </button>
+            <button class="filter-btn" data-filter="memory">
+                <span class="icon">📍</span> Memories
+            </button>
+            <button class="filter-btn" data-filter="dream">
+                <span class="icon">✨</span> Dreams
+            </button>
+            <button class="filter-btn add-btn" id="add-btn">
+                <span class="icon">➕</span> Add Pin
+            </button>
+        </div>
+
+        <!-- Map Container -->
+        <div id="map"></div>
+
+        <!-- Legend -->
+        <div class="legend">
+            <div class="legend-item">
+                <span class="legend-marker memory-marker"></span>
+                <span>Places we've been</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-marker dream-marker"></span>
+                <span>Places we dream of</span>
+            </div>
+            <div class="legend-item">
+                <button id="export-btn" class="filter-btn" style="font-size:0.85em;padding:6px 14px;">
+                    <span class="icon">💾</span> Export Pins
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-body">
+                <h2 id="modal-title"></h2>
+                <p id="modal-location" class="modal-location"></p>
+                <div id="modal-media" class="modal-media"></div>
+                <p id="modal-description" class="modal-description"></p>
+                <p id="modal-date" class="modal-date"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Pin Modal -->
+    <div id="add-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close add-close">&times;</button>
+            <div class="modal-body">
+                <h2 id="add-modal-title">Add a new place</h2>
+                <form id="add-form">
+                    <label>
+                        Type
+                        <select id="add-type">
+                            <option value="memory">Memory</option>
+                            <option value="dream">Dream</option>
+                        </select>
+                    </label>
+                    <label>
+                        Title
+                        <input id="add-title" type="text" required />
+                    </label>
+                    <!-- Location display now handled by the search field below -->
+                    <label style="position:relative;">
+                        Search Location
+                        <div style="display:flex;gap:8px;align-items:center;">
+                            <input id="add-location" type="search" placeholder="Search a place (e.g. Paris, Kyoto)" required />
+                        </div>
+                        <div id="loc-results" class="loc-results" aria-live="polite"></div>
+                        <!-- selected place (shows after choosing a result) -->
+                        <div id="selected-location" class="selected-location" style="display:none; margin-top:8px;">
+                            <strong>Selected:</strong>
+                            <span id="selected-location-name"></span>
+                            <button type="button" id="clear-selection" class="filter-btn" style="margin-left:8px;padding:6px 10px;">Edit</button>
+                        </div>
+                        <!-- hidden coords set when a result is chosen -->
+                        <input id="add-lat" type="hidden" />
+                        <input id="add-lng" type="hidden" />
+                    </label>
+                    <label>
+                        Date
+                        <input id="add-date" type="text" />
+                    </label>
+                    <label>
+                        Description
+                        <textarea id="add-description"></textarea>
+                    </label>
+                    <label>
+                        Upload media (images / video / audio)
+                        <input id="add-media-files" type="file" accept="image/*,video/*,audio/*" multiple />
+                    </label>
+                    <div style="display:flex;gap:10px;margin-top:16px;">
+                        <button type="submit" class="filter-btn">Add</button>
+                        <button type="button" class="filter-btn add-close">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Media overlay for viewing images full-screen -->
+    <div id="media-overlay" class="media-overlay" style="display:none;">
+        <button id="media-overlay-close" class="modal-close">&times;</button>
+        <img id="media-overlay-img" src="" alt="" />
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+</html>

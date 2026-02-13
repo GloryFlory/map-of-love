@@ -1,0 +1,9 @@
+# OS files
+.DS_Store
+
+# Server log
+server.log
+
+# Videos & GIFs too large for GitHub push
+*.mp4
+*.gif
