@@ -7,22 +7,61 @@
         "location_full": "Malta, Southern Europe",
         "lat": 35.9375,
         "lng": 14.3754,
-        "description": "Sun-soaked days wandering through honey-coloured streets of Valletta, swimming in crystal-clear waters, and lazy afternoons with nowhere to be but together. Malta gave us golden light and golden memories.",
+        "description": "Our home for 11 years and the place where we eventually met through our love to Acroyoga and connected deeper through our love for dance, deep connection and love itself.",
         "date": "2024",
         "media": [
-            { "type": "image", "url": "assets/media/Malta/IMG_1078.jpg" },
-            { "type": "image", "url": "assets/media/Malta/IMG_1164.jpg" },
-            { "type": "image", "url": "assets/media/Malta/PXL_20230806_143955434.TS_exported_51618_1691389670226.jpg" },
-            { "type": "image", "url": "assets/media/Malta/PXL_20231102_222123815.TS_exported_164626_1698963989032.jpg" },
-            { "type": "image", "url": "assets/media/Malta/PXL_20240616_130508718.MP.jpg" },
-            { "type": "image", "url": "assets/media/Malta/PXL_20241130_131317838.jpg" },
-            { "type": "image", "url": "assets/media/Malta/PXL_20241218_204404434.MP.jpg" },
-            { "type": "image", "url": "assets/media/Malta/PXL_20250819_063544419.jpg" },
-            { "type": "image", "url": "assets/media/Malta/PXL_20250924_105448936.jpg" },
-            { "type": "image", "url": "assets/media/Malta/PXL_20250925_085711005.jpg" },
-            { "type": "image", "url": "assets/media/Malta/PXL_20250927_191657277.jpg" },
-            { "type": "image", "url": "assets/media/Malta/PXL_20251010_050526437.PORTRAIT.ORIGINAL.jpg" },
-            { "type": "image", "url": "assets/media/Malta/PXL_20251022_194827819.jpg" }
+            {
+                "type": "image",
+                "url": "assets/media/Malta/IMG_1078.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Malta/IMG_1164.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Malta/PXL_20230806_143955434.TS_exported_51618_1691389670226.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Malta/PXL_20231102_222123815.TS_exported_164626_1698963989032.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Malta/PXL_20240616_130508718.MP.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Malta/PXL_20241130_131317838.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Malta/PXL_20241218_204404434.MP.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Malta/PXL_20250819_063544419.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Malta/PXL_20250924_105448936.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Malta/PXL_20250925_085711005.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Malta/PXL_20250927_191657277.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Malta/PXL_20251010_050526437.PORTRAIT.ORIGINAL.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Malta/PXL_20251022_194827819.jpg"
+            }
         ]
     },
     {
@@ -33,12 +72,21 @@
         "location_full": "Gozo, Malta",
         "lat": 36.0444,
         "lng": 14.2511,
-        "description": "Our little island within an island. Rustic charm, hidden bays, and that feeling of being completely off the grid — just us, the sea, and the Gozitan countryside stretching out in every direction.",
+        "description": "Gozo has always been a special island to me, but hosting the first ever MAC there with you has made this island even more special to me and will make this forever a very special place for me.",
         "date": "2024",
         "media": [
-            { "type": "image", "url": "assets/media/Gozo/PXL_20240925_210341379.MP.jpg" },
-            { "type": "image", "url": "assets/media/Gozo/PXL_20240927_121100716.jpg" },
-            { "type": "image", "url": "assets/media/Gozo/PXL_20240927_144853155.MP.jpg" }
+            {
+                "type": "image",
+                "url": "assets/media/Gozo/PXL_20240925_210341379.MP.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Gozo/PXL_20240927_121100716.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Gozo/PXL_20240927_144853155.MP.jpg"
+            }
         ]
     },
     {
@@ -49,18 +97,45 @@
         "location_full": "Cinque Terre, Liguria, Italy",
         "lat": 44.1461,
         "lng": 9.6439,
-        "description": "Five colourful villages tumbling into the Mediterranean. Hiking between towns with the sun on our backs, sharing pesto and focaccia, watching the sunset paint Manarola in shades of pink and orange. Pure Italian magic with you.",
+        "description": "Five colourful villages tumbling into the Mediterranean. Hiking between towns with the rain on our backs, sharing pizzas and enjoying Acroyoga are some of the highlights. The late night adventures by the sea will forever be my favourite part of this trip, though.",
         "date": "2024",
         "media": [
-            { "type": "image", "url": "assets/media/Cinque Terre/PXL_20230921_164808901.MP~2.jpg" },
-            { "type": "image", "url": "assets/media/Cinque Terre/PXL_20240908_070258023.jpg" },
-            { "type": "image", "url": "assets/media/Cinque Terre/PXL_20240908_090510622.PORTRAIT.jpg" },
-            { "type": "image", "url": "assets/media/Cinque Terre/PXL_20240908_101814415.jpg" },
-            { "type": "image", "url": "assets/media/Cinque Terre/PXL_20240908_102359276.jpg" },
-            { "type": "image", "url": "assets/media/Cinque Terre/PXL_20240910_152121170.PORTRAIT.ORIGINAL.jpg" },
-            { "type": "image", "url": "assets/media/Cinque Terre/PXL_20240912_170715369.MP.jpg" },
-            { "type": "image", "url": "assets/media/Cinque Terre/PXL_20240916_091336158.MP.jpg" },
-            { "type": "image", "url": "assets/media/Cinque Terre/PXL_20240916_140259497.jpg" }
+            {
+                "type": "image",
+                "url": "assets/media/Cinque Terre/PXL_20230921_164808901.MP~2.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Cinque Terre/PXL_20240908_070258023.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Cinque Terre/PXL_20240908_090510622.PORTRAIT.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Cinque Terre/PXL_20240908_101814415.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Cinque Terre/PXL_20240908_102359276.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Cinque Terre/PXL_20240910_152121170.PORTRAIT.ORIGINAL.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Cinque Terre/PXL_20240912_170715369.MP.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Cinque Terre/PXL_20240916_091336158.MP.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Cinque Terre/PXL_20240916_140259497.jpg"
+            }
         ]
     },
     {
@@ -74,17 +149,50 @@
         "description": "Island life at its finest — warm turquoise water, swaying palm trees, and nights under a sky full of stars. From secret beaches to that incredible Thai food, every day felt like a dream we didn't want to wake up from.",
         "date": "2024",
         "media": [
-            { "type": "image", "url": "assets/media/Koh Phangan/PXL_20240312_162210700.MP.jpg" },
-            { "type": "image", "url": "assets/media/Koh Phangan/PXL_20240315_072805492.MP.jpg" },
-            { "type": "image", "url": "assets/media/Koh Phangan/PXL_20240316_004657979.MP.jpg" },
-            { "type": "image", "url": "assets/media/Koh Phangan/PXL_20240316_120000346.NIGHT.jpg" },
-            { "type": "image", "url": "assets/media/Koh Phangan/PXL_20240318_093848817.TS_exported_90132.jpg" },
-            { "type": "image", "url": "assets/media/Koh Phangan/PXL_20240319_094920144.MP.jpg" },
-            { "type": "image", "url": "assets/media/Koh Phangan/PXL_20240322_062850340.PORTRAIT.jpg" },
-            { "type": "image", "url": "assets/media/Koh Phangan/PXL_20240322_064346860.MP.jpg" },
-            { "type": "image", "url": "assets/media/Koh Phangan/PXL_20240324_094122413.MP.jpg" },
-            { "type": "image", "url": "assets/media/Koh Phangan/PXL_20240326_012529664.MP.jpg" },
-            { "type": "image", "url": "assets/media/Koh Phangan/PXL_20240326_031730472.MP.jpg" }
+            {
+                "type": "image",
+                "url": "assets/media/Koh Phangan/PXL_20240312_162210700.MP.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Koh Phangan/PXL_20240315_072805492.MP.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Koh Phangan/PXL_20240316_004657979.MP.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Koh Phangan/PXL_20240316_120000346.NIGHT.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Koh Phangan/PXL_20240318_093848817.TS_exported_90132.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Koh Phangan/PXL_20240319_094920144.MP.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Koh Phangan/PXL_20240322_062850340.PORTRAIT.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Koh Phangan/PXL_20240322_064346860.MP.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Koh Phangan/PXL_20240324_094122413.MP.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Koh Phangan/PXL_20240326_012529664.MP.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Koh Phangan/PXL_20240326_031730472.MP.jpg"
+            }
         ]
     },
     {
@@ -95,39 +203,90 @@
         "location_full": "Bali, Indonesia",
         "lat": -8.3405,
         "lng": 115.092,
-        "description": "Rice terraces, temple ceremonies, and the most beautiful sunrises over Mount Agung. Bali wrapped us in its warmth — from Ubud's jungle to Canggu's surf, every corner had something magical waiting for us.",
+        "description": "Rice terraces, temple ceremonies, risky swims at Jungle Prana, the most beautiful sunrises over Mount Batur and magical days at the School of Unified Healing. Bali wrapped us in its warmth.",
         "date": "2024",
         "media": [
-            { "type": "image", "url": "assets/media/Bali/PXL_20250303_142739965.MP.jpg" },
-            { "type": "image", "url": "assets/media/Bali/PXL_20250305_115239879.jpg" },
-            { "type": "image", "url": "assets/media/Bali/PXL_20250306_031958086.jpg" },
-            { "type": "image", "url": "assets/media/Bali/PXL_20250307_004548041.MP.jpg" },
-            { "type": "image", "url": "assets/media/Bali/PXL_20250307_073930231.jpg" },
-            { "type": "image", "url": "assets/media/Bali/PXL_20250308_035742202.jpg" },
-            { "type": "image", "url": "assets/media/Bali/PXL_20250308_040135995.jpg" }
+            {
+                "type": "image",
+                "url": "assets/media/Bali/PXL_20250303_142739965.MP.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Bali/PXL_20250305_115239879.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Bali/PXL_20250306_031958086.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Bali/PXL_20250307_004548041.MP.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Bali/PXL_20250307_073930231.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Bali/PXL_20250308_035742202.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Bali/PXL_20250308_040135995.jpg"
+            }
         ]
     },
     {
         "id": 6,
         "type": "memory",
-        "title": "Chiang Mai Adventures",
-        "location": "Chiang Mai",
-        "location_full": "Chiang Mai, Thailand",
+        "title": "Thailand Adventures",
+        "location": "Thailand",
+        "location_full": "Northern Thailand",
         "lat": 18.7883,
         "lng": 98.9853,
-        "description": "The Rose of the North stole our hearts. Night markets buzzing with energy, temples glowing in the morning mist, and the lush green mountains all around. Chiang Mai was where we slowed down and soaked it all in together.",
+        "description": "The Rose of the North stole our hearts. Night markets buzzing with energy, temples glowing in the morning mist, and the lush green mountains all around. From Chiang Mai to Chiang Rai to the laid-back vibes of Pai — Thailand was where we slowed down and soaked it all in together.",
         "date": "2024",
         "media": [
-            { "type": "image", "url": "assets/media/Chiang Mai/PXL_20250329_034408126.jpg" },
-            { "type": "image", "url": "assets/media/Chiang Mai/PXL_20250511_085218961.jpg" },
-            { "type": "image", "url": "assets/media/Chiang Mai/PXL_20250519_034736753.jpg" },
-            { "type": "image", "url": "assets/media/Chiang Mai/PXL_20250520_071620333.jpg" },
-            { "type": "image", "url": "assets/media/Chiang Mai/PXL_20250520_081912321.jpg" },
-            { "type": "image", "url": "assets/media/Chiang Mai/PXL_20250521_091752920.jpg" },
-            { "type": "image", "url": "assets/media/Chiang Mai/PXL_20250523_034513818.MP.jpg" },
-            { "type": "image", "url": "assets/media/Chiang Mai/PXL_20250528_102807288.jpg" },
-            { "type": "image", "url": "assets/media/Chiang Mai/PXL_20250530_063400701.jpg" },
-            { "type": "image", "url": "assets/media/Chiang Mai/PXL_20250601_065322949.jpg" }
+            {
+                "type": "image",
+                "url": "assets/media/Thailand/Chiang Mai/PXL_20250329_034408126.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Thailand/Chiang Mai/PXL_20250511_085218961.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Thailand/Chiang Mai/PXL_20250519_034736753.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Thailand/Chiang Mai/PXL_20250521_091752920.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Thailand/Chiang Mai/PXL_20250530_063400701.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Thailand/Chiang Mai/PXL_20250601_065322949.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Thailand/Chiang Rai/PXL_20250520_071620333.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Thailand/Chiang Rai/PXL_20250520_081912321.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Thailand/Pai/PXL_20250523_034513818.MP.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Thailand/Pai/PXL_20250528_102807288.jpg"
+            }
         ]
     },
     {
@@ -141,15 +300,42 @@
         "description": "Waves rolling in at Midigama, tuk-tuks on dusty roads, and the warmest smiles everywhere we went. Sri Lanka felt like discovering a secret paradise — the surf, the curries, the sunsets. A place that stays with you.",
         "date": "2024",
         "media": [
-            { "type": "image", "url": "assets/media/Sri Lanka/PXL_20260101_065946743.MP.jpg" },
-            { "type": "image", "url": "assets/media/Sri Lanka/PXL_20260108_041153656.NIGHT.jpg" },
-            { "type": "image", "url": "assets/media/Sri Lanka/PXL_20260110_115857588.MP.jpg" },
-            { "type": "image", "url": "assets/media/Sri Lanka/PXL_20260112_011252821.MP.jpg" },
-            { "type": "image", "url": "assets/media/Sri Lanka/PXL_20260112_124416958.MP.jpg" },
-            { "type": "image", "url": "assets/media/Sri Lanka/PXL_20260117_082731449.jpg" },
-            { "type": "image", "url": "assets/media/Sri Lanka/PXL_20260120_044410859.jpg" },
-            { "type": "image", "url": "assets/media/Sri Lanka/PXL_20260125_103822827.jpg" },
-            { "type": "image", "url": "assets/media/Sri Lanka/PXL_20260205_135235542.jpg" }
+            {
+                "type": "image",
+                "url": "assets/media/Sri Lanka/PXL_20260101_065946743.MP.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Sri Lanka/PXL_20260108_041153656.NIGHT.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Sri Lanka/PXL_20260110_115857588.MP.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Sri Lanka/PXL_20260112_011252821.MP.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Sri Lanka/PXL_20260112_124416958.MP.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Sri Lanka/PXL_20260117_082731449.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Sri Lanka/PXL_20260120_044410859.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Sri Lanka/PXL_20260125_103822827.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Sri Lanka/PXL_20260205_135235542.jpg"
+            }
         ]
     },
     {
@@ -163,20 +349,74 @@
         "description": "From the bustling streets of Hanoi to the lantern-lit nights of Hoi An, Vietnam was a feast for the senses. Motorbikes, pho for breakfast, Ha Long Bay at dawn — every day was an adventure, and every adventure was better with you.",
         "date": "2024",
         "media": [
-            { "type": "image", "url": "assets/media/Vietnam/PXL_20250314_113112973.jpg" },
-            { "type": "image", "url": "assets/media/Vietnam/PXL_20250314_125918621.MP.jpg" },
-            { "type": "image", "url": "assets/media/Vietnam/PXL_20250316_054759354.MP.jpg" },
-            { "type": "image", "url": "assets/media/Vietnam/PXL_20250316_102254918.MP.jpg" },
-            { "type": "image", "url": "assets/media/Vietnam/PXL_20250317_144814789.jpg" },
-            { "type": "image", "url": "assets/media/Vietnam/PXL_20250318_060409163-COLLAGE.jpg" },
-            { "type": "image", "url": "assets/media/Vietnam/PXL_20250319_111848722.MP.jpg" },
-            { "type": "image", "url": "assets/media/Vietnam/PXL_20250319_111854779.MP.jpg" },
-            { "type": "image", "url": "assets/media/Vietnam/PXL_20250321_130217933.jpg" },
-            { "type": "image", "url": "assets/media/Vietnam/PXL_20250323_060753331.PORTRAIT.jpg" },
-            { "type": "image", "url": "assets/media/Vietnam/PXL_20250323_124942706.jpg" },
-            { "type": "image", "url": "assets/media/Vietnam/PXL_20250325_103754350.MP.jpg" },
-            { "type": "image", "url": "assets/media/Vietnam/PXL_20250327_021543268.PORTRAIT.jpg" },
-            { "type": "image", "url": "assets/media/Vietnam/PXL_20250328_082051431.jpg" }
+            {
+                "type": "image",
+                "url": "assets/media/Vietnam/Ho Chi Min City/PXL_20250314_113112973.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Vietnam/Ho Chi Min City/PXL_20250314_125918621.MP.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Vietnam/Phu Quoc/PXL_20250316_054759354.MP.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Vietnam/Phu Quoc/PXL_20250316_102254918.MP.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Vietnam/Phu Quoc/PXL_20250317_144814789.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Vietnam/Hoi An/PXL_20250318_060409163-COLLAGE.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Vietnam/Hoi An/PXL_20250319_111848722.MP.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Vietnam/Hoi An/PXL_20250319_111854779.MP.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Vietnam/Hoi An/PXL_20250321_130217933.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Vietnam/Hanoi/PXL_20250323_060753331.PORTRAIT.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Vietnam/Hanoi/PXL_20250323_124942706.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Vietnam/Ha Giang/PXL_20250325_103754350.MP.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Vietnam/Ha Giang/PXL_20250327_021543268.PORTRAIT.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Vietnam/Ha Giang/PXL_20250328_082051431.jpg"
+            }
         ]
+    },
+    {
+        "id": 9,
+        "type": "dream",
+        "title": "Brazil Calling",
+        "location": "Brazil",
+        "location_full": "Brazil, South America",
+        "lat": -14.235,
+        "lng": -51.9253,
+        "description": "A dream waiting to become a memory. The rhythm of samba, the warmth of the people, the endless coastline — Brazil is calling us, and one day we'll answer.",
+        "date": "",
+        "media": []
     }
 ]
