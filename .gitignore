@@ -5,5 +5,4 @@
 server.log
 
 # Videos & GIFs too large for GitHub push
-*.mp4
-*.gif
+assets/media/Malta/PXL_20230706_161358111.TS.mp4

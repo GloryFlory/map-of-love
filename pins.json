@@ -61,6 +61,18 @@
             {
                 "type": "image",
                 "url": "assets/media/Malta/PXL_20251022_194827819.jpg"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Malta/PXL_20230714_182156466.TS-ANIMATION.gif"
+            },
+            {
+                "type": "image",
+                "url": "assets/media/Malta/PXL_20241218_204357891.MP-ANIMATION.gif"
+            },
+            {
+                "type": "video",
+                "url": "assets/media/Malta/PXL_20250110_211207685.TS.mp4"
             }
         ]
     },
@@ -233,6 +245,14 @@
             {
                 "type": "image",
                 "url": "assets/media/Bali/PXL_20250308_040135995.jpg"
+            },
+            {
+                "type": "video",
+                "url": "assets/media/Bali/PXL_20250306_071408512.TS.mp4"
+            },
+            {
+                "type": "video",
+                "url": "assets/media/Bali/20250310_172411.mp4"
             }
         ]
     },
@@ -370,6 +390,10 @@
                 "url": "assets/media/Vietnam/Phu Quoc/PXL_20250317_144814789.jpg"
             },
             {
+                "type": "video",
+                "url": "assets/media/Vietnam/Phu Quoc/PXL_20250315_110825628.TS.mp4"
+            },
+            {
                 "type": "image",
                 "url": "assets/media/Vietnam/Hoi An/PXL_20250318_060409163-COLLAGE.jpg"
             },
@@ -406,17 +430,5 @@
                 "url": "assets/media/Vietnam/Ha Giang/PXL_20250328_082051431.jpg"
             }
         ]
-    },
-    {
-        "id": 9,
-        "type": "dream",
-        "title": "Brazil Calling",
-        "location": "Brazil",
-        "location_full": "Brazil, South America",
-        "lat": -14.235,
-        "lng": -51.9253,
-        "description": "A dream waiting to become a memory. The rhythm of samba, the warmth of the people, the endless coastline — Brazil is calling us, and one day we'll answer.",
-        "date": "",
-        "media": []
     }
 ]
