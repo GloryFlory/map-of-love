@@ -493,4 +493,251 @@ header h1 {
     #modal-title {
         font-size: 1.6em;
     }
+
+    .cute-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .distance-value {
+        font-size: 2em;
+    }
+}
+
+/* ============================
+   "Find Me" / Location button
+   ============================ */
+.locate-btn {
+    border-color: #3498db;
+    color: #2980b9;
+}
+
+.locate-btn:hover {
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.25);
+}
+
+.locate-btn.active {
+    background: linear-gradient(135deg, #3498db 0%, #2471a3 100%);
+    color: white;
+    border-color: #3498db;
+}
+
+/* ============================
+   Pulsing "You are here" marker
+   ============================ */
+.you-marker-dot {
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+.you-marker-dot .dot-core {
+    width: 16px;
+    height: 16px;
+    background: #3498db;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.you-marker-dot .dot-pulse {
+    width: 30px;
+    height: 30px;
+    background: rgba(52, 152, 219, 0.3);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse-ring 2s ease-out infinite;
+    z-index: 1;
+}
+
+@keyframes pulse-ring {
+    0% {
+        transform: translate(-50%, -50%) scale(0.6);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(2.2);
+        opacity: 0;
+    }
+}
+
+/* Legend person marker colors */
+.flo-marker {
+    background: #3498db;
+}
+
+.maria-marker {
+    background: #ff6b9d;
+}
+
+/* ============================
+   "Who are you?" modal
+   ============================ */
+.who-modal-content {
+    max-width: 400px;
+}
+
+.who-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 20px 32px;
+    border: 2px solid #eee;
+    border-radius: 16px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.who-btn:hover {
+    border-color: #ff6b9d;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 107, 157, 0.2);
+}
+
+.who-emoji {
+    font-size: 2.2em;
+}
+
+.who-name {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #555;
+}
+
+/* Waiting banner */
+.waiting-banner {
+    background: linear-gradient(135deg, #f0f7ff 0%, #e3f0fc 50%, #f0f7ff 100%);
+    border-top-color: #3498db;
+}
+
+/* ============================
+   Dashed line on map
+   ============================ */
+/* Handled via Leaflet polyline options in JS */
+
+/* ============================
+   Distance Banner
+   ============================ */
+.distance-banner {
+    background: linear-gradient(135deg, #fff5f9 0%, #fce4ec 50%, #fff0f5 100%);
+    border-top: 3px solid #ff6b9d;
+    padding: 30px 30px 25px;
+    text-align: center;
+    position: relative;
+    animation: banner-slide-in 0.6s ease;
+}
+
+@keyframes banner-slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.distance-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #999;
+    transition: color 0.2s;
+}
+
+.distance-close:hover {
+    color: #ff6b9d;
+}
+
+.distance-header {
+    margin-bottom: 10px;
+}
+
+.distance-header h3 {
+    font-size: 1.1em;
+    color: #888;
+    font-weight: 500;
+    display: inline;
+}
+
+.distance-hearts {
+    font-size: 1.3em;
+    margin-right: 6px;
+}
+
+.distance-value {
+    font-size: 2.8em;
+    font-weight: 700;
+    color: #ff6b9d;
+    margin: 8px 0;
+    letter-spacing: -1px;
+}
+
+.distance-subtext {
+    font-size: 1em;
+    color: #999;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+/* Cute stat cards */
+.cute-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    max-width: 600px;
+    margin: 0 auto 18px;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 16px;
+    padding: 16px 10px;
+    box-shadow: 0 3px 12px rgba(255, 107, 157, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+}
+
+.stat-emoji {
+    font-size: 1.8em;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.stat-number {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #ff6b9d;
+    display: block;
+}
+
+.stat-label {
+    font-size: 0.8em;
+    color: #999;
+    display: block;
+    margin-top: 2px;
+}
+
+.distance-footer {
+    color: #c94b77;
+    font-size: 1em;
+    font-style: italic;
+    margin-top: 4px;
 }

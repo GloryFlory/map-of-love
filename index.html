@@ -33,6 +33,9 @@
             <button class="filter-btn add-btn" id="add-btn">
                 <span class="icon">➕</span> Add Pin
             </button>
+            <button class="filter-btn locate-btn" id="locate-btn">
+                <span class="icon">�</span> Where are we?
+            </button>
         </div>
 
         <!-- Map Container -->
@@ -49,9 +52,61 @@
                 <span>Places we dream of</span>
             </div>
             <div class="legend-item">
+                <span class="legend-marker flo-marker"></span>
+                <span>Flo</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-marker maria-marker"></span>
+                <span>Maria</span>
+            </div>
+            <div class="legend-item">
                 <button id="export-btn" class="filter-btn" style="font-size:0.85em;padding:6px 14px;">
                     <span class="icon">💾</span> Export Pins
                 </button>
+            </div>
+        </div>
+
+        <!-- Distance Banner (hidden until both locations shared) -->
+        <div id="distance-banner" class="distance-banner" style="display:none;">
+            <button id="distance-close" class="distance-close">&times;</button>
+            <div class="distance-header">
+                <span class="distance-hearts">💕</span>
+                <h3>The distance between us right now</h3>
+            </div>
+            <div class="distance-value" id="distance-value"></div>
+            <div class="distance-subtext" id="distance-subtext"></div>
+            <div class="cute-stats" id="cute-stats"></div>
+            <p class="distance-footer">No matter the distance — my heart is always with you ❤️</p>
+        </div>
+
+        <!-- Waiting Banner (shown when only one person shared) -->
+        <div id="waiting-banner" class="distance-banner waiting-banner" style="display:none;">
+            <button id="waiting-close" class="distance-close">&times;</button>
+            <div class="distance-header">
+                <span class="distance-hearts">📍</span>
+                <h3 id="waiting-text"></h3>
+            </div>
+            <p class="distance-footer" style="margin-top:10px;">Send the link to the other person so they can share theirs too! 💌</p>
+        </div>
+    </div>
+
+    <!-- Who Are You modal -->
+    <div id="who-modal" class="modal">
+        <div class="modal-content who-modal-content">
+            <button class="modal-close who-close">&times;</button>
+            <div class="modal-body" style="text-align:center;">
+                <h2 style="color:#ff6b9d; margin-bottom:6px;">Who are you? 💕</h2>
+                <p style="color:#999; margin-bottom:24px;">So we can find the distance between you two</p>
+                <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+                    <button class="who-btn" id="who-flo">
+                        <span class="who-emoji">🙋‍♂️</span>
+                        <span class="who-name">Flo</span>
+                    </button>
+                    <button class="who-btn" id="who-maria">
+                        <span class="who-emoji">🙋‍♀️</span>
+                        <span class="who-name">Maria</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>

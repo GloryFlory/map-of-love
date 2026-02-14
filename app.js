@@ -589,3 +589,254 @@ function exportPins() {
 // wire up export button
 const exportBtn = document.getElementById('export-btn');
 if (exportBtn) exportBtn.addEventListener('click', exportPins);
+
+// ===============================================
+// "Where are we?" — Dual-location distance feature
+// ===============================================
+
+let floMarker = null;
+let mariaMarker = null;
+let distanceLine = null;
+
+const locateBtn = document.getElementById('locate-btn');
+const whoModal = document.getElementById('who-modal');
+
+// Two different coloured pulsing markers
+function makePersonIcon(color, rgbaColor) {
+    return L.divIcon({
+        className: 'custom-marker',
+        html: `<div class="you-marker-dot">
+                   <div class="dot-pulse" style="background:${rgbaColor};"></div>
+                   <div class="dot-core" style="background:${color};"></div>
+               </div>`,
+        iconSize: [30, 30],
+        iconAnchor: [15, 15]
+    });
+}
+
+const floIcon = makePersonIcon('#3498db', 'rgba(52,152,219,0.3)');
+const mariaIcon = makePersonIcon('#ff6b9d', 'rgba(255,107,157,0.3)');
+
+// --- localStorage helpers ---
+function getSavedLocation(who) {
+    try {
+        const data = JSON.parse(localStorage.getItem('loveMapLocations') || '{}');
+        return data[who] || null;
+    } catch { return null; }
+}
+
+function saveLocation(who, lat, lng) {
+    try {
+        const data = JSON.parse(localStorage.getItem('loveMapLocations') || '{}');
+        data[who] = { lat, lng, timestamp: Date.now() };
+        localStorage.setItem('loveMapLocations', JSON.stringify(data));
+    } catch (e) {
+        console.warn('Could not save location', e);
+    }
+}
+
+// --- Button click → open "Who are you?" modal ---
+locateBtn.addEventListener('click', () => {
+    whoModal.classList.add('show');
+});
+
+// Close the who-modal
+document.querySelectorAll('.who-close').forEach(btn => {
+    btn.addEventListener('click', () => whoModal.classList.remove('show'));
+});
+whoModal.addEventListener('click', (e) => {
+    if (e.target === whoModal) whoModal.classList.remove('show');
+});
+
+// Person selection handlers
+document.getElementById('who-flo').addEventListener('click', () => requestLocation('flo'));
+document.getElementById('who-maria').addEventListener('click', () => requestLocation('maria'));
+
+function requestLocation(who) {
+    whoModal.classList.remove('show');
+
+    if (!navigator.geolocation) {
+        alert('Geolocation is not supported by your browser 😢');
+        return;
+    }
+
+    locateBtn.innerHTML = '⏳ Locating…';
+    locateBtn.disabled = true;
+
+    navigator.geolocation.getCurrentPosition(
+        (pos) => {
+            saveLocation(who, pos.coords.latitude, pos.coords.longitude);
+            locateBtn.innerHTML = '<span class="icon">💕</span> Where are we?';
+            locateBtn.disabled = false;
+            renderLocations();
+        },
+        (err) => {
+            console.warn('Geolocation error:', err);
+            alert('Could not get your location. Please allow location access and try again.');
+            locateBtn.innerHTML = '<span class="icon">�</span> Where are we?';
+            locateBtn.disabled = false;
+        },
+        { enableHighAccuracy: true, timeout: 15000 }
+    );
+}
+
+// --- Render whatever locations we have ---
+function renderLocations() {
+    // Clean up old markers & line
+    if (floMarker) { map.removeLayer(floMarker); floMarker = null; }
+    if (mariaMarker) { map.removeLayer(mariaMarker); mariaMarker = null; }
+    if (distanceLine) { map.removeLayer(distanceLine); distanceLine = null; }
+
+    const flo = getSavedLocation('flo');
+    const maria = getSavedLocation('maria');
+
+    if (!flo && !maria) return; // nothing saved
+
+    // Place Flo's marker
+    if (flo) {
+        floMarker = L.marker([flo.lat, flo.lng], { icon: floIcon, zIndexOffset: 1000 }).addTo(map);
+        floMarker.bindPopup('<div class="popup-content"><h3>Flo 💙</h3></div>');
+    }
+
+    // Place Maria's marker
+    if (maria) {
+        mariaMarker = L.marker([maria.lat, maria.lng], { icon: mariaIcon, zIndexOffset: 1000 }).addTo(map);
+        mariaMarker.bindPopup('<div class="popup-content"><h3>Maria �</h3></div>');
+    }
+
+    // Both shared → show distance!
+    if (flo && maria) {
+        document.getElementById('waiting-banner').style.display = 'none';
+
+        // Draw dashed line
+        distanceLine = L.polyline(
+            [[flo.lat, flo.lng], [maria.lat, maria.lng]],
+            { color: '#ff6b9d', weight: 2, dashArray: '8, 8', opacity: 0.7 }
+        ).addTo(map);
+
+        // Fit map to show both
+        const bounds = L.latLngBounds([[flo.lat, flo.lng], [maria.lat, maria.lng]]);
+        map.fitBounds(bounds, { padding: [60, 60] });
+
+        const km = haversineDistance(flo.lat, flo.lng, maria.lat, maria.lng);
+        showDistanceBanner(km);
+    } else {
+        // Only one person shared
+        document.getElementById('distance-banner').style.display = 'none';
+        const who = flo ? 'Flo' : 'Maria';
+        const other = flo ? 'Maria' : 'Flo';
+        const waitText = document.getElementById('waiting-text');
+        waitText.textContent = `${who}'s location saved! Waiting for ${other} to share theirs…`;
+        document.getElementById('waiting-banner').style.display = 'block';
+
+        // Center on the single marker
+        const loc = flo || maria;
+        map.setView([loc.lat, loc.lng], 6);
+    }
+}
+
+// --- Haversine formula — returns distance in km ---
+function haversineDistance(lat1, lon1, lat2, lon2) {
+    const R = 6371;
+    const dLat = toRad(lat2 - lat1);
+    const dLon = toRad(lon2 - lon1);
+    const a = Math.sin(dLat / 2) ** 2 +
+              Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *
+              Math.sin(dLon / 2) ** 2;
+    return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+}
+
+function toRad(deg) { return deg * Math.PI / 180; }
+
+// --- Distance banner with meaningful stats ---
+function showDistanceBanner(km) {
+    const banner = document.getElementById('distance-banner');
+    const valueEl = document.getElementById('distance-value');
+    const subtextEl = document.getElementById('distance-subtext');
+    const statsEl = document.getElementById('cute-stats');
+
+    const roundKm = Math.round(km);
+
+    valueEl.textContent = `${roundKm.toLocaleString()} km`;
+
+    // Pick a sweet sub-text based on distance
+    if (roundKm < 1) {
+        subtextEl.textContent = `That's basically the same room — get off your phone and hug! 🤗`;
+    } else if (roundKm < 10) {
+        subtextEl.textContent = `So close! That's about a ${Math.round(km * 12)} minute bike ride apart 🚲`;
+    } else if (roundKm < 100) {
+        subtextEl.textContent = `Just a short road trip away — about ${Math.round(km / 80 * 60)} minutes by car 🚗`;
+    } else if (roundKm < 1000) {
+        subtextEl.textContent = `A few hours of missing each other — but so worth the wait 💕`;
+    } else {
+        subtextEl.textContent = `Across the world, but never out of each other's hearts 🌍`;
+    }
+
+    // Real, meaningful distance equivalents
+    const walkHours = km / 5;                      // average walk ~5 km/h
+    const handHoldSteps = Math.round(km * 1312);   // ~1312 steps per km
+    const flightMins = Math.round(km / 900 * 60);  // cruising speed ~900 km/h
+    const marathons = (km / 42.195).toFixed(1);     // marathon = 42.195 km
+    const eiffelTowers = Math.round(km * 1000 / 330); // 330m tall
+    const hugLength = km * 1000;                   // distance in metres → "that many metres of one long hug"
+
+    const stats = [];
+
+    if (roundKm < 1) {
+        // Very close — show cute tiny-distance stats
+        const metres = Math.round(km * 1000);
+        stats.push(
+            { emoji: '👣', number: `${metres}`, label: 'metres between us' },
+            { emoji: '🤗', number: `${Math.ceil(metres / 0.5)}`, label: 'tiny steps to reach you' },
+            { emoji: '💋', number: '∞', label: 'kisses — you\'re RIGHT HERE' }
+        );
+    } else if (roundKm < 50) {
+        stats.push(
+            { emoji: '🚶‍♂️', number: formatDuration(walkHours), label: 'walking to you non-stop' },
+            { emoji: '👣', number: handHoldSteps.toLocaleString(), label: 'steps hand-in-hand to meet' },
+            { emoji: '🚲', number: `${Math.round(km / 15 * 60)} min`, label: 'by bike to your arms' },
+            { emoji: '🏃', number: `${marathons}`, label: 'marathons of missing you' },
+            { emoji: '🗼', number: eiffelTowers.toLocaleString(), label: 'Eiffel Towers stacked between us' },
+            { emoji: '💌', number: `${Math.round(km * 1000 / 21.5)}`, label: 'love letters laid end to end' }
+        );
+    } else {
+        stats.push(
+            { emoji: '✈️', number: `${flightMins} min`, label: 'by plane to be together' },
+            { emoji: '🚶‍♂️', number: formatDuration(walkHours), label: 'walking to you non-stop' },
+            { emoji: '👣', number: handHoldSteps.toLocaleString(), label: 'steps hand-in-hand to meet' },
+            { emoji: '🏃', number: `${marathons}`, label: 'marathons of missing you' },
+            { emoji: '🗼', number: eiffelTowers.toLocaleString(), label: 'Eiffel Towers stacked between us' },
+            { emoji: '💌', number: `${Math.round(hugLength / 21.5).toLocaleString()}`, label: 'love letters laid end to end' }
+        );
+    }
+
+    statsEl.innerHTML = stats.map(s => `
+        <div class="stat-card">
+            <span class="stat-emoji">${s.emoji}</span>
+            <span class="stat-number">${s.number}</span>
+            <span class="stat-label">${s.label}</span>
+        </div>
+    `).join('');
+
+    banner.style.display = 'block';
+    banner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function formatDuration(hours) {
+    if (hours < 1) return `${Math.round(hours * 60)} min`;
+    const d = Math.floor(hours / 24);
+    const h = Math.round(hours % 24);
+    if (d > 0) return `${d}d ${h}h`;
+    return `${h}h`;
+}
+
+// Close banners
+document.getElementById('distance-close').addEventListener('click', () => {
+    document.getElementById('distance-banner').style.display = 'none';
+});
+document.getElementById('waiting-close').addEventListener('click', () => {
+    document.getElementById('waiting-banner').style.display = 'none';
+});
+
+// On page load, restore any saved locations
+renderLocations();
